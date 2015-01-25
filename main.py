@@ -11,10 +11,15 @@ def game():
 
         if result == answer:
             print "Dead heat. Let's try again!"
-        elif (result == "scissors" and answer == "stone") or (result == "stone" and answer == "paper") or (result == "paper" and answer == "scissors"):
-            print "You won!"
         else:
-            print "I won!"
+            if result == "scissors" and answer == "stone":
+                print "You won!"
+            elif result == "stone" and answer == "paper":
+                print "You won!"
+            elif result == "paper" and answer == "scissors":
+                print "You won!"
+            else:
+                print "I won!"
 
     else:
         print "You didn't pick stone, paper or scissors. This is the Argument Room, I've told you that already! Try again."
